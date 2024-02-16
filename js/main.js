@@ -45,8 +45,26 @@ fadeEls.forEach(function (fadeEl, index) {
 
 
 
-const swiper = new Swiper('.notice-line .swiper', {
+new Swiper('.notice-line .swiper', {
   direction: 'vertical',
   autoplay: true,
   loop: true
+});
+
+new Swiper('.promotion .swiper', {
+  slidesPerView: 3,
+  spaceBetween: 10,
+  centeredSlides: true,
+  loop: true,
+  autoplay: {
+    delay: 1000
+  },
+  pagination: {
+    el: '.promotion .swiper-pagination',
+    clickable: true
+  },
+  navigation: {
+    nextEl: '.promotion .swiper-next',
+    prevEl: '.promotion .swiper-prev'
+  }
 });
